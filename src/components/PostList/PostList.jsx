@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { postContext } from '../../contexts/PostContextProvider';
+import PaginationControlled from '../Pagination/Pagination';
 import Post from '../Post/Post';
 
 import './PostList.css';
@@ -16,6 +17,7 @@ const PostList = () => {
       {posts?.map((item) => (
         <Post {...item} key={item.id} />
       ))}
+      <PaginationControlled />
     </div>
   );
 };
